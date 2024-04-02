@@ -21,6 +21,7 @@ public class Enemy {
     public Enemy(String pathToImage, double posX, double posY) {
         Image image = new Image(pathToImage);
         model = new ImageView(image);
+        model.setStyle("-fx-background-color: transparent;");
         positionX = posX;
         positionY = posY;
         model.setX(positionX);

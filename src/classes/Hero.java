@@ -11,4 +11,15 @@ public abstract class Hero {
         this.posY = posY;
         this.speedX = speedX;
     }
+
+    public double xMovement(double elapsedTime) {
+        return 0;
+    }
+    public double yMovement(double elapsedTime) {
+        return 0;
+    }
+
+    public void update(double timeDelta, double elapsedTime) {
+
+    }
 }

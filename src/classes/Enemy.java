@@ -10,8 +10,8 @@ public class Enemy {
     private ImageView model;
     private double speedX;
     private double speedY;
-    private double positionX;
-    private double positionY;
+    private double posX;
+    private double posY;
     private double gravity;
     private final double initialSpeedX = 120;
     private final double maxSpeedY = 300;
@@ -25,10 +25,10 @@ public class Enemy {
         model.setFitHeight(height);
         model.setFitWidth(width);
         model.setPreserveRatio(true);
-        positionX = posX;
-        positionY = posY;
-        model.setX(positionX);
-        model.setY(positionY);
+        this.posX = posX;
+        this.posY = posY;
+        model.setX(posX);
+        model.setY(posY);
         speedX = initialSpeedX;
         speedY = 0;
         gravity = 500;
@@ -64,11 +64,11 @@ public class Enemy {
         }
 
         // update de la position
-        positionX += speedX * time;
-        positionY += speedY * time;
+        posX += speedX * time;
+        posY += speedY * time;
 
-        model.setX(positionX);
-        model.setY(positionY);
+        model.setX(posX);
+        model.setY(posY);
 
         // vérifier si l'enemy doit rebondir
         bounce();
@@ -77,12 +77,12 @@ public class Enemy {
     // Méthode qui permet à l'enemy de rebondir s'il touche au bord
     public void bounce(){
         // On considère que l'enemy rebondi si le modèle de son image touche au bord
-        if (positionY < 0 ) {
-            positionY = 0;
+        if (posY < 0 ) {
+            posY = 0;
             speedY = -speedY;
         }
-        else if (positionY > 400 - model.getImage().getHeight()) {
-            positionY = 400 - model.getImage().getHeight();
+        else if (posY > 400 - model.getImage().getHeight()) {
+            posY = 400 - model.getImage().getHeight();
             speedY = -speedY;
         }
     }

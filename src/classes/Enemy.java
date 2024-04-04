@@ -18,10 +18,13 @@ public class Enemy {
     private double health;
 
     // Constructeur
-    public Enemy(String pathToImage, double posX, double posY) {
+    public Enemy(String pathToImage, double posX, double posY, double height, double width) {
         Image image = new Image(pathToImage);
         model = new ImageView(image);
         model.setStyle("-fx-background-color: transparent;");
+        model.setFitHeight(height);
+        model.setFitWidth(width);
+        model.setPreserveRatio(true);
         positionX = posX;
         positionY = posY;
         model.setX(positionX);

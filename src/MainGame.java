@@ -19,7 +19,7 @@ public class MainGame extends Application{
         Scene scene = new Scene(root, 640, 400);
 
         // Instanciation de l'enemy et ajout à la scène
-        Enemy enemy = new Enemy("/images/enemy.png", 100, 100);
+        Enemy enemy = new Enemy("/images/enemy.png", 100, 100, 70,70);
         root.getChildren().add(enemy.getModel());
 
         // Affichage de la scène

@@ -10,8 +10,8 @@ public class HeroFurtif extends Hero {
     private int goldCoins = 8;
 
     // Constructeur
-    public HeroFurtif(String pathToImage, double posX, double posY, double height, double width) {
-        super(posX,posY);
+    public HeroFurtif(String pathToImage, double posX, double posY, double speedX, double height, double width) {
+        super(posX, posY, speedX);
         Image image = new Image(pathToImage);
         model = new ImageView(image);
         model.setStyle("-fx-background-color: transparent;");

@@ -6,8 +6,9 @@ public abstract class Hero {
     protected double speedX;
     protected int goldCoins;
 
-    public Hero (double posX, double posY) {
+    public Hero (double posX, double posY, double speedX) {
         this.posX = posX;
         this.posY = posY;
+        this.speedX = speedX;
     }
 }
